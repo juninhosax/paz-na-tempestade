@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Karla:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #0C0B09; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #D9AE4A; text-decoration: none; }
+  a:hover { color: #EFC96F; text-decoration: none; }
+  p { text-wrap: pretty; }
+</style>
+</helmet>
+
+<div style="font-family: Karla, system-ui, sans-serif; color: #F2EEE6; background: #0C0B09; width: 100%; overflow-x: hidden">
+
+  <div style="width: 100%; background: #14120E; color: #D9AE4A; padding: 11px 18px; text-align: center; font-size: clamp(11px, 3vw, 13px); letter-spacing: 0.03em; text-transform: uppercase; font-weight: 600; line-height: 1.45">
+    Preço de lançamento — {{ vagas }} das 300 primeiras vagas
+  </div>
+
+  <section data-screen-label="01 · Promessa" style="position: relative; isolation: isolate; overflow: hidden; background: #0C0B09">
+    <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none; display: block">
+      <x-import component-from-global-scope="particle-wave" from="./particle-wave.js" color="#EFC96F" opacity="0.85" amount="150" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+    </div>
+    <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(95% 80% at 18% 45%, rgba(12,11,9,0.94) 0%, rgba(12,11,9,0.72) 38%, rgba(12,11,9,0.15) 75%, rgba(12,11,9,0) 100%)"></div>
+    <div style="position: relative; z-index: 2; max-width: 1140px; margin: 0 auto; padding: clamp(36px, 6vw, 80px) clamp(20px, 5vw, 48px) clamp(36px, 6vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(30px, 5vw, 60px); align-items: center">
+    <div style="min-width: 0">
+      <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #D9AE4A; margin-bottom: 22px">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #D9AE4A; display: inline-block"></span>
+        Livro · 5 capítulos · jornada de 21 dias
+      </div>
+      <h1 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.95rem, 8vw, 3.5rem); line-height: 1.1; letter-spacing: -0.02em; overflow-wrap: break-word; margin: 0 0 22px">{{ headline }}</h1>
+      <p style="font-size: clamp(1.05rem, 3.6vw, 1.2rem); line-height: 1.6; color: #C6BEB1; margin: 0 0 30px; max-width: 32em">{{ subheadline }}</p>
+      <a href="https://pay.kiwify.com.br/EmpIPGx" target="_blank" rel="noopener" style="display: block; width: 100%; max-width: 430px; text-align: center; background: #D9AE4A; color: #14120E; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1.08rem); letter-spacing: 0.01em; padding: 20px 24px; border-radius: 6px; box-shadow: 0 2px 0 #96731F" style-hover="background: #EFC96F">QUERO COMEÇAR MEUS 21 DIAS — {{ preco }}</a>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #A79E8E; margin: 16px 0 0; line-height: 1.7">Acesso imediato no seu e-mail · 10 minutos por dia<br>Garantia incondicional de 7 dias</p>
+    </div>
+    <div style="min-width: 0; display: flex; align-items: center; justify-content: center; padding: clamp(16px, 4vw, 40px) 0">
+      <div style="position: relative; width: 100%; max-width: 360px; perspective: 1600px">
+        <div style="position: absolute; left: 6%; right: 6%; bottom: -6%; height: 10%; background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0.75), rgba(0,0,0,0) 70%); filter: blur(10px)"></div>
+        <div style="position: relative; transform: rotateY(-17deg) rotateX(3deg); transform-style: preserve-3d; box-shadow: -28px 34px 60px rgba(0,0,0,0.6), -6px 8px 18px rgba(0,0,0,0.5)">
+          <div style="position: absolute; top: 0; bottom: 0; left: -17px; width: 17px; transform: rotateY(-72deg); transform-origin: right center; background: linear-gradient(90deg, #0A0907 0%, #221D14 55%, #3A3122 100%); border-radius: 2px 0 0 2px"></div>
+          <div style="position: relative; aspect-ratio: 2 / 3; border-radius: 3px 6px 6px 3px; overflow: hidden; background: #14120E; border: 1px solid #2A251D">
+            <image-slot id="pazt-capa-ebook" shape="rect" placeholder="Capa do ebook Paz na Tempestade"></image-slot>
+            <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.03) 16%, rgba(255,255,255,0) 34%, rgba(0,0,0,0.22) 100%)"></div>
+            <div style="position: absolute; top: 0; bottom: 0; left: 0; width: 26px; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.12) 55%, rgba(255,255,255,0.06) 100%)"></div>
+          </div>
+        </div>
+        <div style="position: absolute; top: -14px; right: -14px; background: #D9AE4A; color: #14120E; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 13px; border-radius: 4px; box-shadow: 0 6px 18px rgba(0,0,0,0.5)">PDF · acesso imediato</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section data-screen-label="02 · Dor e método" style="background: #14120E; border-top: 1px solid #2A251D; border-bottom: 1px solid #2A251D">
+    <div style="max-width: 1140px; margin: 0 auto; padding: clamp(44px, 7vw, 84px) clamp(20px, 5vw, 48px)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(30px, 5vw, 56px); align-items: center">
+        <div style="min-width: 0; position: relative; aspect-ratio: 3 / 4; max-height: 58vh; border-radius: 10px; overflow: hidden">
+          <image-slot id="pazt-dor-orando" shape="rounded" radius="10" placeholder="Pessoa orando — mãos unidas ou cabeça baixa, penumbra"></image-slot>
+        </div>
+        <div style="min-width: 0">
+          <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.55rem, 6.2vw, 2.35rem); line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 26px">Você reconhece isso?</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <p style="margin: 0; font-size: 1.05rem; line-height: 1.55; color: #D8D2C6; padding-left: 20px; border-left: 2px solid #332E24">Você acorda às 3 da manhã com o peito apertado — <strong>e sem motivo nenhum.</strong></p>
+            <p style="margin: 0; font-size: 1.05rem; line-height: 1.55; color: #D8D2C6; padding-left: 20px; border-left: 2px solid #332E24">Você ora pedindo paz e se levanta do mesmo jeito. <strong>Aí vem a culpa.</strong></p>
+            <p style="margin: 0; font-size: 1.05rem; line-height: 1.55; color: #D8D2C6; padding-left: 20px; border-left: 2px solid #332E24">Você é o forte de todo mundo — <strong>e não tem para quem dizer como está.</strong></p>
+            <p style="margin: 0; font-size: 1.05rem; line-height: 1.55; color: #D8D2C6; padding-left: 20px; border-left: 2px solid #332E24">Já tentou jejum, mais leitura, mais serviço. Durou uma semana. <strong>Voltou pior.</strong></p>
+            <p style="margin: 0; font-size: 1.05rem; line-height: 1.55; color: #D8D2C6; padding-left: 20px; border-left: 2px solid #D9AE4A">E aquele pensamento que você não fala em voz alta: <strong>"será que Deus desistiu de mim?"</strong></p>
+          </div>
+          <p style="font-family: Newsreader, Georgia, serif; font-size: clamp(1.2rem, 5vw, 1.5rem); line-height: 1.35; margin: 28px 0 0; color: #F2EEE6">O problema não é falta de fé. <em>É falta de método.</em></p>
+        </div>
+      </div>
+
+      <div style="max-width: 40em; margin: clamp(40px, 6vw, 68px) 0 0">
+        <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.55rem, 6.2vw, 2.35rem); line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 22px">Fé <em>e</em> ciência, no mesmo dia</h2>
+        <p style="font-size: 1.06rem; line-height: 1.6; color: #D8D2C6; margin: 0 0 16px">A ansiedade crônica não é pecado: é um alarme biológico travado em "ligado". Mas existe um lado que a ciência não alcança — o <strong>medo espiritual</strong>, o silêncio de Deus, a sensação de estar sozinho na tempestade.</p>
+        <p style="font-size: 1.06rem; line-height: 1.6; color: #D8D2C6; margin: 0">É por isso que quase tudo falha pela metade: o devocional cuida da alma e ignora o corpo; a clínica cuida do corpo e trata a fé como sintoma. <strong>Aqui, os dois juntos — por 21 dias.</strong></p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; margin-top: clamp(30px, 4vw, 44px)">
+        <div style="background: #16130F; border: 1px solid #2A251D; border-radius: 10px; padding: 26px 24px">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #D9AE4A; margin-bottom: 12px">Dias 1 a 7</div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.32rem; line-height: 1.2; margin: 0 0 12px">Quebrando o ciclo do medo</h3>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.55; color: #C6BEB1">Desintoxicação mental, fim do piloto automático e o princípio do <strong>Sábado da Alma</strong>: descanso intencional, não colapso.</p>
+        </div>
+        <div style="background: #16130F; border: 1px solid #2A251D; border-radius: 10px; padding: 26px 24px">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #D9AE4A; margin-bottom: 12px">Dias 8 a 14</div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.32rem; line-height: 1.2; margin: 0 0 12px">Reprogramando a mente</h3>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.55; color: #C6BEB1">A <strong>dieta da mente</strong>: neuroplasticidade a seu favor, postura da vitória e a dor ressignificada por pequenas vitórias diárias.</p>
+        </div>
+        <div style="background: #1A1711; border: 1px solid #8A6C22; border-radius: 10px; padding: 26px 24px">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #EFC96F; margin-bottom: 12px">Dias 15 a 21</div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.32rem; line-height: 1.2; margin: 0 0 12px">Ativando o espírito guerreiro</h3>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.55; color: #C6BEB1">Da defensiva para o ataque: gratidão como arma, a armadura de Deus e o poder de servir. Onde a dor vira propósito.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: clamp(28px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 10px; align-items: center">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #D9AE4A; margin-right: 8px">Todo dia tem</span>
+        <span style="border: 1px solid #2A251D; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #C6BEB1; background: #16130F">Reflexão bíblica</span>
+        <span style="border: 1px solid #2A251D; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #C6BEB1; background: #16130F">Gigante da Fé</span>
+        <span style="border: 1px solid #2A251D; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #C6BEB1; background: #16130F">Fé &amp; Ciência</span>
+        <span style="border: 1px solid #2A251D; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #C6BEB1; background: #16130F">Oração de ancoragem</span>
+        <span style="border: 1px solid #2A251D; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #C6BEB1; background: #16130F">Louvor recomendado</span>
+        <span style="border: 1px solid #8A6C22; border-radius: 100px; padding: 8px 15px; font-size: 0.9rem; color: #EFC96F; background: #1A1711">Desafio do dia</span>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; margin-top: clamp(32px, 4vw, 48px); padding-top: 30px; border-top: 1px solid #2A251D">
+        <span style="font-family: Newsreader, Georgia, serif; font-size: clamp(1.18rem, 4.6vw, 1.3rem); line-height: 1.3">É esse o plano que você procurava?</span>
+        <a href="https://pay.kiwify.com.br/EmpIPGx" target="_blank" rel="noopener" style="display: block; width: 100%; max-width: 430px; text-align: center; background: #D9AE4A; color: #14120E; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1rem); padding: 18px 24px; border-radius: 6px; box-shadow: 0 2px 0 #96731F" style-hover="background: #EFC96F">COMEÇAR O DIA 1 HOJE — {{ preco }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" data-screen-label="03 · Oferta e autor" style="position: relative; isolation: isolate; overflow: hidden; background: #0C0B09">
+    <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none; display: block">
+      <x-import component-from-global-scope="particle-wave" from="./particle-wave.js" color="#EFC96F" opacity="0.85" amount="150" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+    </div>
+    <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(95% 80% at 18% 45%, rgba(12,11,9,0.94) 0%, rgba(12,11,9,0.72) 38%, rgba(12,11,9,0.15) 75%, rgba(12,11,9,0) 100%)"></div>
+    <div style="position: relative; z-index: 2; max-width: 1140px; margin: 0 auto; padding: clamp(44px, 7vw, 84px) clamp(20px, 5vw, 48px)">
+    <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.55rem, 6.2vw, 2.35rem); line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 30px">O que você recebe hoje</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px; align-items: start">
+      <div style="background: #16130F; border: 1px solid #2A251D; border-radius: 10px; padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; font-size: 1.01rem; line-height: 1.55; color: #D8D2C6"><strong style="color: #D9AE4A">✓</strong> <strong>O livro completo</strong> — 5 capítulos e a jornada prática de 21 dias, em 3 fases.</p>
+        <p style="margin: 0; font-size: 1.01rem; line-height: 1.55; color: #D8D2C6"><strong style="color: #D9AE4A">✓</strong> <strong>Mapa de Fuga em 4 passos</strong> — o que fazer no meio da crise, com os 3 gatilhos invisíveis do medo desarmados.</p>
+        <p style="margin: 0; font-size: 1.01rem; line-height: 1.55; color: #D8D2C6"><strong style="color: #D9AE4A">✓</strong> <strong>Plano de Contenção de 5 Minutos</strong> — o protocolo contra recaídas.</p>
+        <p style="margin: 0; font-size: 1.01rem; line-height: 1.55; color: #D8D2C6"><strong style="color: #D9AE4A">✓</strong> <strong>Ferramentas de guerra espiritual</strong> — checklist diário, <strong>33 versículos</strong> contra a ansiedade, <strong>Método P.A.Z.</strong> de 5 minutos e playlist de louvores.</p>
+        
+      </div>
+      <div style="background: #14120E; border: 1px solid #2A251D; border-radius: 10px; padding: clamp(24px, 3vw, 34px)">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #EFC96F">Preço de lançamento</div>
+        <div style="font-family: Newsreader, Georgia, serif; font-size: clamp(2.8rem, 13vw, 4.2rem); line-height: 1; margin: 12px 0 6px">{{ preco }}</div>
+        <div style="font-size: 0.94rem; color: #A79E8E; margin-bottom: 24px">Encerrado o lote de 300, passa a R$ 37 em definitivo.</div>
+        <a href="https://pay.kiwify.com.br/EmpIPGx" target="_blank" rel="noopener" style="display: block; width: 100%; text-align: center; background: #D9AE4A; color: #14120E; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1.05rem); padding: 20px 20px; border-radius: 6px; box-shadow: 0 2px 0 #96731F" style-hover="background: #EFC96F">QUERO MEU LIVRO AGORA</a>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A79E8E; margin: 14px 0 0; line-height: 1.7; text-align: center">Acesso imediato · Pagamento seguro<br>Garantia incondicional de 7 dias</p>
+        <p style="font-size: 0.97rem; line-height: 1.6; color: #D8D2C6; margin: 22px 0 0; padding-top: 20px; border-top: 1px solid #2A251D">Uma consulta particular custa de R$ 150 a R$ 300. Uma caixa de medicamento passa de R$ 60 — todo mês. <strong>{{ preco }} é menos do que você já gastou este mês em coisas que não te fizeram dormir melhor.</strong></p>
+      </div>
+    </div>
+
+    <sc-if value="{{ mostrarOrderBump }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top: 22px; border: 2px solid #D9AE4A; border-radius: 10px; padding: 24px 26px; background: #1A1711; display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between">
+        <div style="min-width: 240px; flex: 1 1 300px">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #D9AE4A; margin-bottom: 10px">Adicione no checkout · + R$ 27</div>
+          <div style="font-family: Newsreader, Georgia, serif; font-size: 1.3rem; line-height: 1.2; margin-bottom: 8px">Paz na Tempestade em Áudio</div>
+          <p style="margin: 0; font-size: 0.97rem; line-height: 1.55; color: #C6BEB1">Os 21 dias narrados, para ouvir no carro, na caminhada ou na madrugada em que não der para ler.</p>
+        </div>
+        <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 0.97rem; color: #F2EEE6; cursor: pointer">
+          <input type="checkbox" style="width: 20px; height: 20px; accent-color: #D9AE4A">
+          Sim, quero o áudio
+        </label>
+      </div>
+    </sc-if>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 52px); align-items: center; margin-top: clamp(40px, 6vw, 68px); padding-top: clamp(32px, 4vw, 48px); border-top: 1px solid #2A251D">
+      <div style="min-width: 0; position: relative; aspect-ratio: 1 / 1; max-height: 52vh; border-radius: 10px; overflow: hidden">
+        <image-slot id="pazt-prova-biblia" shape="rounded" radius="10" placeholder="Pessoa lendo a Bíblia — mesa, café, luz da manhã"></image-slot>
+      </div>
+      <div style="min-width: 0">
+        <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.5rem, 6vw, 2.3rem); line-height: 1.18; margin: 0 0 22px">Quem escreveu isso</h2>
+        <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 20px">
+          <div style="position: relative; width: 88px; height: 88px; flex: 0 0 88px; border-radius: 50%; overflow: hidden">
+            <image-slot id="pazt-autor-retrato" shape="circle" placeholder="Retrato do autor"></image-slot>
+          </div>
+          <div>
+            <div style="font-family: Newsreader, Georgia, serif; font-size: 1.28rem; line-height: 1.2">José Cláudio Cândido Júnior</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #D9AE4A; line-height: 1.7; margin-top: 7px">Pastor · farmacêutico clínico · ministro de louvor</div>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 1.04rem; line-height: 1.7; color: #D8D2C6">José Cláudio Cândido Júnior é pastor na Igreja Batista Nova Canaã, ministro de louvor e saxofonista, além de farmacêutico especialista em Farmacologia Clínica e Oncologia. Casado e pai de dois filhos, superou uma profunda crise de ansiedade e depressão após um divórcio traumático, unindo fé e ciência para ensinar o cuidado integral do corpo, da mente e do espírito.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section data-screen-label="04 · Objeções e decisão" style="background: #14120E; border-top: 1px solid #2A251D">
+    <div style="max-width: 1140px; margin: 0 auto; padding: clamp(44px, 7vw, 84px) clamp(20px, 5vw, 48px)">
+      <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.55rem, 6.2vw, 2.35rem); line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 30px">Antes de fechar essa página</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 26px 44px">
+        <div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 10px">"Já tentei e não funcionou."</h3>
+          <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #D8D2C6">Funcionou — por uma semana. Porque atacou um lado só. Você não fracassou: recebeu metade do tratamento duas vezes.</p>
+        </div>
+        <div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 10px">"Não tenho tempo."</h3>
+          <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #D8D2C6">São 10 minutos por dia — e o Método P.A.Z. de 5 minutos para as manhãs impossíveis. Você já perde mais que isso rolando o celular às 3 da manhã.</p>
+        </div>
+        <div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 10px">"Minha ansiedade é clínica."</h3>
+          <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #D8D2C6">Isso não substitui médico, psicólogo nem medicação — e quem escreveu é farmacêutico clínico, então não vai te dizer para parar nada. Ele cobre o que o consultório não alcança.</p>
+        </div>
+        <div>
+          <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 10px">"É psicologia com versículo em cima?"</h3>
+          <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #D8D2C6">O contrário. A Escritura é o eixo; a ciência explica <em>como</em> o medo se instala no corpo — a Palavra diz <em>quem</em> tem autoridade sobre ele.</p>
+        </div>
+      </div>
+
+      <div style="border: 2px solid #D9AE4A; border-radius: 10px; padding: clamp(26px, 4vw, 40px); background: #16130F; margin-top: clamp(36px, 5vw, 56px); text-align: center">
+        <div style="display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #14120E; background: #D9AE4A; padding: 8px 14px; border-radius: 4px; margin-bottom: 20px">7 dias · 100% do seu dinheiro de volta</div>
+        <h3 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.4rem, 5.4vw, 2rem); line-height: 1.2; margin: 0 0 18px">Leia tudo. Se não for para você, o dinheiro volta.</h3>
+        <p style="font-size: 1.03rem; line-height: 1.65; color: #D8D2C6; margin: 0 auto 18px; max-width: 40em">Sem formulário, sem entrevista, sem constrangimento: responda o e-mail da compra com a palavra "devolver" e eu devolvo {{ preco }} integralmente.</p>
+        <p style="font-family: Newsreader, Georgia, serif; font-size: 1.25rem; line-height: 1.4; margin: 0">O risco é meu. <em>Você já carrega o suficiente.</em></p>
+      </div>
+
+      <div style="max-width: 780px; margin: 0 auto; padding: clamp(44px, 7vw, 88px) 0 clamp(20px, 3vw, 32px); text-align: center">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #EFC96F; margin-bottom: 20px">{{ vagas }} de 300 vagas restantes</div>
+        <h2 style="font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(1.75rem, 7vw, 3rem); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 24px">Daqui a 21 dias você vai estar em algum lugar.</h2>
+        <p style="font-size: 1.05rem; line-height: 1.65; color: #D8D2C6; margin: 0 auto 16px; max-width: 38em">Ou você passa essas três semanas como passou as últimas — servindo por fora, colapsando por dentro, esperando a angústia ir embora sozinha. Ela não vai.</p>
+        <p style="font-size: 1.05rem; line-height: 1.65; color: #D8D2C6; margin: 0 auto 30px; max-width: 38em">Ou você começa o dia 1 hoje e chega no dia 21 dormindo a noite inteira, sabendo o que fazer quando o peito aperta — e com a sua família reencontrando você.</p>
+        <p style="font-family: Newsreader, Georgia, serif; font-size: clamp(1.2rem, 5vw, 1.6rem); line-height: 1.4; margin: 0 0 30px">Não é a sua fé que está em jogo. É o método.</p>
+        <a href="https://pay.kiwify.com.br/EmpIPGx" target="_blank" rel="noopener" style="display: block; width: 100%; max-width: 430px; margin: 0 auto; text-align: center; background: #D9AE4A; color: #14120E; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1.12rem); padding: 21px 24px; border-radius: 6px; box-shadow: 0 2px 0 #96731F" style-hover="background: #EFC96F">SIM, QUERO MINHA PAZ DE VOLTA — {{ preco }}</a>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A79E8E; margin: 16px 0 0; line-height: 1.7">Acesso imediato · Garantia de 7 dias · Pagamento seguro</p>
+      </div>
+
+      <p style="max-width: 40em; margin: 0 auto; font-size: 1.02rem; line-height: 1.68; color: #C6BEB1; padding-bottom: clamp(20px, 4vw, 40px)"><strong style="color: #F2EEE6">P.S.</strong> — Se você leu até aqui, não foi curiosidade: alguma linha descreveu a sua madrugada. Você não precisa de mais força de vontade nem de orar melhor. Precisa de um plano que trate o medo nas duas frentes em que ele existe. São 21 dias, 10 minutos por dia, {{ preco }} — e se não for para você, o dinheiro volta.</p>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #2A251D; padding: 28px clamp(20px, 5vw, 48px) 48px; background: #0C0B09">
+    <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A79E8E; line-height: 1.7">
+      <span>Paz na Tempestade · José Cláudio Cândido Júnior</span>
+      <span>Este material não substitui acompanhamento médico ou psicológico.</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;headlineVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A — falta de fé&quot;,&quot;B — mecanismo único&quot;,&quot;C — silêncio de Deus&quot;,&quot;D — custo para a família&quot;],&quot;default&quot;:&quot;A — falta de fé&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Teste A/B&quot;},&quot;preco&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;R$ 19,90&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Oferta&quot;},&quot;vagasRestantes&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:217,&quot;min&quot;:0,&quot;max&quot;:300,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Oferta&quot;},&quot;mostrarOrderBump&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Oferta&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const v = this.props.headlineVariant ?? "A — falta de fé";
+    const heads = {
+      "A — falta de fé": [
+        "Cansado de ouvir que a sua ansiedade é \u201cfalta de fé\u201d?",
+        "Você ama a Deus, cumpre o seu papel, mas o nó na garganta e as noites em claro continuam lá. Em 21 dias, aprenda a alinhar espírito, mente e corpo através de um passo a passo diário de 10 minutos que une as Escrituras à neurociência. Desarme o alarme do medo e transforme a sua maior crise em um terreno de paz inabalável."
+      ],
+      "B — mecanismo único": [
+        "A ansiedade não é falta de fé. É um alarme biológico travado em \u201cligado\u201d.",
+        "O plano de 21 dias que trata o medo nas duas frentes onde ele existe: o seu espírito e o seu corpo. 10 minutos por dia, escrito por um pastor que também é farmacêutico clínico."
+      ],
+      "C — silêncio de Deus": [
+        "E se Deus não estiver calado — e sim esperando que você pare de tentar apressar a cura?",
+        "21 dias para sair da posição de vítima da própria mente e assumir a de guerreiro, unindo o que a Bíblia ensina sobre o medo ao que a neurociência descobriu sobre como ele se instala."
+      ],
+      "D — custo para a família": [
+        "Há quanto tempo a sua família convive com a sua versão esgotada?",
+        "21 dias, 10 minutos por dia, para voltar a dormir a noite inteira e parar de administrar aparências. Escrituras e neurociência no mesmo plano prático."
+      ]
+    };
+    const [headline, subheadline] = heads[v] ?? heads["A — falta de fé"];
+    return {
+      headline,
+      subheadline,
+      preco: this.props.preco ?? "R$ 19,90",
+      vagas: this.props.vagasRestantes ?? 217,
+      mostrarOrderBump: this.props.mostrarOrderBump ?? true
+    };
+  }
+}
+
+</script>
+</body>
+</html>
